@@ -64,6 +64,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Onboarding(
         proceedButtonStyle: ProceedButtonStyle(
+          proceedpButtonWidget: Icon(Icons.forward),
           proceedButtonRoute: (context) {
             return Navigator.pushAndRemoveUntil(
               context,

@@ -92,7 +92,7 @@ class _OnboardingState extends State<Onboarding> with TickerProviderStateMixin {
         },
         child: Padding(
           padding: widget.proceedButtonStyle.proceedButtonPadding,
-          child: widget.proceedButtonStyle.proceedpButtonText,
+          child: widget.proceedButtonStyle.proceedpButtonWidget,
         ),
       ),
     );

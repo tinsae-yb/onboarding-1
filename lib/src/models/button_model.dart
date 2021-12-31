@@ -25,14 +25,14 @@ class ProceedButtonStyle {
   final Color proceedButtonColor;
   final BorderRadius proceedButtonBorderRadius;
   final EdgeInsets proceedButtonPadding;
-  final Text proceedpButtonText;
+  final Widget proceedpButtonWidget;
 
   const ProceedButtonStyle({
     this.proceedButtonColor = defaultProceedButtonColor,
     this.proceedButtonBorderRadius = defaultProceedButtonBorderRadius,
     this.proceedButtonPadding = defaultProceedButtonPadding,
     required this.proceedButtonRoute,
-    this.proceedpButtonText = const Text(
+    this.proceedpButtonWidget = const Text(
       'Sign up',
       style: defaultProceedButtonTextStyle,
     ),
