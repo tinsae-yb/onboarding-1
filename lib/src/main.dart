@@ -29,7 +29,7 @@ class Onboarding extends StatefulWidget {
   final Indicator indicator;
 
   ///Add styling to the skip button
-  final SkipButtonStyle skipButtonStyle;
+  final NextButtonStyle nextButtonStyle;
 
   ///Add a proceeding button [required] after the user reaches the end of the last page in the [pages] you provided
   final ProceedButtonStyle proceedButtonStyle;
@@ -43,7 +43,7 @@ class Onboarding extends StatefulWidget {
     required this.pages,
     required this.indicator,
     required this.proceedButtonStyle,
-    this.skipButtonStyle = const SkipButtonStyle(),
+    this.nextButtonStyle = const NextButtonStyle(),
     this.footerPadding = util.footerPadding,
     this.pagesContentPadding = util.pageContentPadding,
     this.titleAndInfoPadding = util.titleAndInfoPadding,
@@ -64,19 +64,18 @@ class _OnboardingState extends State<Onboarding> with TickerProviderStateMixin {
   Material get _skipButton {
     final int _pagesLength = widget.pages.length;
     return Material(
-      borderRadius: widget.skipButtonStyle.skipButtonBorderRadius,
-      color: widget.skipButtonStyle.skipButtonColor,
+      borderRadius: widget.nextButtonStyle.nextButtonBorderRadius,
+      color: widget.nextButtonStyle.nextButtonColor,
       child: InkWell(
-        borderRadius: widget.skipButtonStyle.skipButtonBorderRadius,
+        borderRadius: widget.nextButtonStyle.nextButtonBorderRadius,
         onTap: () {
-          final double end = 1.0 - (1 / _pagesLength);
           setState(() {
-            _netDragDistancePercent = end;
+            _netDragDistancePercent = (_currentIndex + 1) / _pagesLength;
           });
         },
         child: Padding(
-            padding: widget.skipButtonStyle.skipButtonPadding,
-            child: widget.skipButtonStyle.skipButtonText),
+            padding: widget.nextButtonStyle.nextButtonPadding,
+            child: widget.nextButtonStyle.nextButtonWidget),
       ),
     );
   }

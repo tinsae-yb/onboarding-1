@@ -22,13 +22,13 @@ const pageInfoStyle = TextStyle(
 );
 const titleAndInfoPadding = EdgeInsets.only(bottom: 45);
 
-//---------Skip button-----------
+//---------Next button-----------
 
-const defaultSkipButtonColor = Color.fromARGB(255, 93, 93, 93);
-const defaultSkipButtonBorderRadius = BorderRadius.all(Radius.circular(20.0));
-const defaultSkipButtonPadding =
+const defaultNextButtonColor = Color.fromARGB(255, 93, 93, 93);
+const defaultNextButtonBorderRadius = BorderRadius.all(Radius.circular(20.0));
+const defaultNextButtonPadding =
     EdgeInsets.symmetric(horizontal: 17.0, vertical: 5.0);
-const defaultSkipButtonTextStyle =
+const defaultNextButtonTextStyle =
     TextStyle(color: Colors.white, letterSpacing: 1.0);
 
 //--------Proceed Button---------

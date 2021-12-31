@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import '../utils/constant_util.dart';
 
-class SkipButtonStyle {
-  final Color skipButtonColor;
-  final BorderRadius skipButtonBorderRadius;
-  final EdgeInsets skipButtonPadding;
-  final Text skipButtonText;
+class NextButtonStyle {
+  final Color nextButtonColor;
+  final BorderRadius nextButtonBorderRadius;
+  final EdgeInsets nextButtonPadding;
+  final Widget nextButtonWidget;
 
-  const SkipButtonStyle({
-    this.skipButtonColor = defaultSkipButtonColor,
-    this.skipButtonBorderRadius = defaultSkipButtonBorderRadius,
-    this.skipButtonPadding = defaultSkipButtonPadding,
-    this.skipButtonText = const Text(
-      'Skip',
-      style: defaultSkipButtonTextStyle,
+  const NextButtonStyle({
+    this.nextButtonColor = defaultNextButtonColor,
+    this.nextButtonBorderRadius = defaultNextButtonBorderRadius,
+    this.nextButtonPadding = defaultNextButtonPadding,
+    this.nextButtonWidget = const Text(
+      'Next',
+      style: defaultNextButtonTextStyle,
     ),
   });
 }
